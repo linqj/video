@@ -26,21 +26,26 @@
 <body>
 <div id="app">
     <div>video4</div>
-    <video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" id="video" controls="controls">
-    <!--<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">-->
-        <!--<source src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" type="video/webm">-->
-        <source src="http://static.e-hqins.com/cms/material/hq-video-qfogg.ogg" type="video/ogg">
-        <source src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" type="video/mp4" >
-        Your browser does not support the video tag.
+    <!--<video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" id="video" controls="controls">-->
+    <!--&lt;!&ndash;<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">&ndash;&gt;-->
+        <!--&lt;!&ndash;<source src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" type="video/webm">&ndash;&gt;-->
+        <!--<source src="http://static.e-hqins.com/cms/material/hq-video-qfogg.ogg" type="video/ogg">-->
+        <!--<source src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" type="video/mp4" >-->
+        <!--Your browser does not support the video tag.-->
+    <!--</video>-->
+    <video autoplay loop muted playsinline id="video" -webkit-playsinline="true"
+           controls="controls" poster=""
+           src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4"
+           type="video/mp4">
     </video>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
-        window.onload=function(){
-            var video = document.getElementById('video');
-            document.addEventListener("WeixinJSBridgeReady", function () {
-                video.play();
-            }, false);
-        }
+//        window.onload=function(){
+//            var video = document.getElementById('video');
+//            document.addEventListener("WeixinJSBridgeReady", function () {
+//                video.play();
+//            }, false);
+//        }
 
     </script>
 
