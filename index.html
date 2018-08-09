@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--<link rel="stylesheet" href="reset.css">-->
     <!--video兼容各个浏览器-->
+    <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"> </script>-->
     <!--<script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>-->
     <title>横琴人寿 让未来可见</title>
     <style>
@@ -12,7 +13,7 @@
             margin:0;
             padding:0;
         }
-        .video{
+        #video{
             display:block;
             margin: 100px auto 0;
             width:80%;
@@ -23,21 +24,23 @@
 <body>
 <div id="app">
     <div>video</div>
-    <video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" class="video" controls="controls" autoplay="autoplay">
+    <video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" id="video" controls="controls" autoplay="autoplay">
     <!--<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">-->
         <!--<source src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" type="video/webm">-->
-        <source src="movie.ogg" type="video/ogg">
+        <source src="http://static.e-hqins.com/cms/material/hq-video-qfogg.ogg" type="video/ogg">
         <source src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" type="video/mp4" >
         Your browser does not support the video tag.
     </video>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
-        (function(){
-            var audioEl = document.getElementsByClassName('video')[0];
-            audioEl.wView.allowsInlineMediaPlayback = YES;
-            audioEl.wView.mediaPlaybackRequiresUserAction = NO;
-        })();
+        //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以
+        document.getElementById('video').play();
+        //必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementById('video').play();
+        }, false);
     </script>
-    <!--<video src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" controls autobuffer class="video"></video>-->
+
 </div>
 </body>
 </html>
