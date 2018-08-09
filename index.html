@@ -25,10 +25,17 @@
     <video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" class="video" controls="controls" autoplay="autoplay">
     <!--<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">-->
         <!--<source src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" type="video/webm">-->
+        <source src="movie.ogg" type="video/ogg">
         <source src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" type="video/mp4" >
         Your browser does not support the video tag.
     </video>
-
+    <script>
+        (function(){
+            var audioEl = document.getElementsByClassName('video')[0];
+            audioEl.wView.allowsInlineMediaPlayback = YES;
+            audioEl.wView.mediaPlaybackRequiresUserAction = NO;
+        })();
+    </script>
     <!--<video src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" controls autobuffer class="video"></video>-->
 </div>
 </body>
