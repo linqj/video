@@ -3,11 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <!--<link rel="stylesheet" href="reset.css">-->
     <!--video兼容各个浏览器-->
-    <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+    <!--<script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>-->
     <title>audio</title>
     <style>
+        html,body{
+            margin:0;
+            padding:0;
+        }
         .video{
             display:block;
             margin: 100px auto 0;
@@ -16,12 +20,12 @@
 </head>
 <body>
 <div id="app">
-    <!--<video src="hengqin.mp4" class="video" controls="" autobuffer=""></video>-->
-    <!--&lt;!&ndash;<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">&ndash;&gt;-->
-        <!--&lt;!&ndash;<source src="http://www.zhangxinxu.com/study/media/cat.mp4" type="video/webm">&ndash;&gt;-->
-        <!--<source src="hengqin.mp4" type="video/mp4" >-->
-        <!--对不起；您的浏览器不支持HTML5视频在WebM和VP8 / VP9或MP4-->
-    <!--</video>-->
+    <video src="http://www.zhangxinxu.com/study/media/cat.mp4" class="video" controls="" autobuffer=""></video>
+    <!--<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">-->
+        <!--<source src="http://www.zhangxinxu.com/study/media/cat.mp4" type="video/webm">-->
+        <source src="http://www.zhangxinxu.com/study/media/cat.mp4" type="video/mp4" >
+        对不起；您的浏览器不支持HTML5视频在WebM和VP8 / VP9或MP4
+    </video>
     <div>video</div>
     <video src="http://www.zhangxinxu.com/study/media/cat.mp4" controls autobuffer class="video"></video>
 </div>
