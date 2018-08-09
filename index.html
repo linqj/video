@@ -7,6 +7,8 @@
     <!--video兼容各个浏览器-->
     <!--<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"> </script>-->
     <script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
     <title>横琴人寿 让未来可见</title>
     <style>
         html,body{
@@ -23,7 +25,7 @@
 </head>
 <body>
 <div id="app">
-    <div>video3</div>
+    <div>video4</div>
     <video src="http://static.e-hqins.com/cms/material/hq-video-qf.mp4" id="video" controls="controls" autoplay="autoplay">
     <!--<video controls class="video" controls="controls" src="http://www.zhangxinxu.com/study/media/cat.mp4"  poster="/Images/treatment/reenex2.png">-->
         <!--<source src="http://cms-dev-os-01.oss-cn-szfinance.aliyuncs.com/cms/material/hengqin_PF.mp3?d=1533779952000" type="video/webm">-->
@@ -40,10 +42,16 @@
 //            document.addEventListener("WeixinJSBridgeReady", function () {
 //                document.getElementById('video').play();
 //            }, false);
-            setTimeout(function () { video.play(); }, 1000);
-            video.addEventListener('touchstart', function () {
+//            setTimeout(function () { video.play(); }, 1000);
+//            video.addEventListener('touchstart', function () {
+//                video.play();
+//            });
+            if (video.paused){
                 video.play();
-            });
+            }
+            else{
+                video.pause();
+            }
         }
     </script>
 
